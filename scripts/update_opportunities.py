@@ -16,9 +16,99 @@ DATA_DIR = ROOT / "data"
 MENTORSHIPS_PATH = DATA_DIR / "mentorships.md"
 INTERNSHIPS_PATH = DATA_DIR / "internships.md"
 FIRST_TIME_PATH = DATA_DIR / "first_time_issues.md"
+GOOD_FIRST_ISSUES_DIR = DATA_DIR / "good_first_issues"
 
 USER_AGENT = "cncf-opportunities-updater/1.0"
 MAX_LFX_PAGES = int(os.environ.get("LFX_MAX_PAGES", "10"))
+MAX_GOOD_FIRST_ISSUES = int(os.environ.get("GOOD_FIRST_MAX", "30"))
+
+SKILL_SEARCHES = [
+    {
+        "name": "Python",
+        "filename": "python_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (python OR django OR flask) in:title,body',
+    },
+    {
+        "name": "PHP",
+        "filename": "php_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (php OR laravel OR symfony) in:title,body',
+    },
+    {
+        "name": "HTML",
+        "filename": "html_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (html OR css OR frontend) in:title,body',
+    },
+    {
+        "name": "CNCF Projects",
+        "filename": "cncf_projects.md",
+        "query": 'label:"good first issue" state:open -is:pr org:cncf',
+    },
+    {
+        "name": "Kubernetes",
+        "filename": "kubernetes_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (kubernetes OR k8s) in:title,body',
+    },
+    {
+        "name": "Security",
+        "filename": "security_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (security OR vulnerability OR secure) in:title,body',
+    },
+    {
+        "name": "Networking",
+        "filename": "networking_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (network OR networking OR dns OR tcp OR udp) in:title,body',
+    },
+    {
+        "name": "Git",
+        "filename": "git_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (git OR github) in:title,body',
+    },
+    {
+        "name": "Shell Scripting",
+        "filename": "shell_scripting_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (bash OR "shell script" OR shell) in:title,body',
+    },
+    {
+        "name": "Salt",
+        "filename": "salt_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (saltstack OR "salt") in:title,body',
+    },
+    {
+        "name": "Chef",
+        "filename": "chef_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (chef OR "chef infra") in:title,body',
+    },
+    {
+        "name": "Monitoring",
+        "filename": "monitoring_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (monitoring OR observability OR metrics) in:title,body',
+    },
+    {
+        "name": "SRE",
+        "filename": "sre_based.md",
+        "query": 'label:"good first issue" state:open -is:pr ("sre" OR reliability) in:title,body',
+    },
+    {
+        "name": "DevOps",
+        "filename": "devops_based.md",
+        "query": 'label:"good first issue" state:open -is:pr (devops OR cicd OR "ci/cd") in:title,body',
+    },
+]
+
+
+def load_dotenv():
+    env_path = ROOT / ".env"
+    if not env_path.exists():
+        return
+    for line in env_path.read_text().splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#") or "=" not in stripped:
+            continue
+        key, value = stripped.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
 
 
 def load_sources():
@@ -27,14 +117,20 @@ def load_sources():
     return json.loads(CONFIG_PATH.read_text())
 
 
-def fetch_yaml(url):
-    req = Request(url, headers={"User-Agent": USER_AGENT})
+def fetch_yaml(url, headers=None):
+    req_headers = {"User-Agent": USER_AGENT}
+    if headers:
+        req_headers.update(headers)
+    req = Request(url, headers=req_headers)
     with urlopen(req, timeout=30) as response:
         return yaml.safe_load(response)
 
 
-def fetch_json(url):
-    req = Request(url, headers={"User-Agent": USER_AGENT})
+def fetch_json(url, headers=None):
+    req_headers = {"User-Agent": USER_AGENT}
+    if headers:
+        req_headers.update(headers)
+    req = Request(url, headers=req_headers)
     with urlopen(req, timeout=30) as response:
         return json.load(response)
 
@@ -121,6 +217,40 @@ def fetch_lfx_projects(api_url):
             break
         seen_keys.add(next_key)
     return projects
+
+
+def github_headers():
+    headers = {"Accept": "application/vnd.github+json"}
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
+
+
+def search_github_issues(query, limit):
+    items = []
+    page = 1
+    per_page = min(100, limit)
+    seen = set()
+    while len(items) < limit:
+        url = (
+            "https://api.github.com/search/issues?"
+            f"q={quote(query)}&sort=updated&order=desc&per_page={per_page}&page={page}"
+        )
+        data = fetch_json(url, headers=github_headers())
+        results = data.get("items", [])
+        if not results:
+            break
+        for issue in results:
+            issue_id = issue.get("id")
+            if issue_id in seen:
+                continue
+            seen.add(issue_id)
+            items.append(issue)
+            if len(items) >= limit:
+                break
+        page += 1
+    return items
 
 
 def format_terms(apprentice_needs):
@@ -236,7 +366,59 @@ def write_first_time(rows):
     FIRST_TIME_PATH.write_text("\n".join(lines) + "\n")
 
 
+def summarize_issue_body(body, max_len=160):
+    if not body:
+        return "No summary provided."
+    cleaned = " ".join(body.split())
+    if len(cleaned) <= max_len:
+        return cleaned
+    return cleaned[: max_len - 3].rstrip() + "..."
+
+
+def format_issue_updated_at(updated_at):
+    if not updated_at:
+        return ""
+    if updated_at.endswith("Z"):
+        updated_at = updated_at[:-1] + "+00:00"
+    try:
+        parsed = datetime.fromisoformat(updated_at)
+    except ValueError:
+        return ""
+    return parsed.date().isoformat()
+
+
+def write_good_first_issue_file(skill, issues, timestamp):
+    path = GOOD_FIRST_ISSUES_DIR / skill["filename"]
+    lines = [
+        f"# Good First Issues: {skill['name']}",
+        "",
+        f"_Last updated: {timestamp}_",
+        "",
+        "| Project / Issue (Summary) | Updated | Link |",
+        "| --- | --- | --- |",
+    ]
+    for issue in issues:
+        repo = issue.get("repository_url", "").rsplit("/", 2)[-2:]
+        project = "/".join(repo) if len(repo) == 2 else "Unknown"
+        title = (issue.get("title") or "").strip()
+        summary = summarize_issue_body(issue.get("body") or "")
+        updated = format_issue_updated_at(issue.get("updated_at") or "")
+        link = issue.get("html_url") or ""
+        combined = f"{project} - {title} ({summary})"
+        lines.append(f"| {combined} | {updated} | {link} |")
+    path.write_text("\n".join(lines) + "\n")
+
+
+def write_good_first_issues(skills):
+    GOOD_FIRST_ISSUES_DIR.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    for skill in skills:
+        issues = search_github_issues(skill["query"], MAX_GOOD_FIRST_ISSUES)
+        write_good_first_issue_file(skill, issues, timestamp)
+
+
 def main():
+    load_dotenv()
     sources = load_sources()
     landscape_url = sources.get("cncf_landscape_yaml")
     lfx_projects_url = sources.get("lfx_mentorship_projects")
@@ -252,10 +434,12 @@ def main():
     mentorship_rows = build_mentorships(lfx_projects, cncf_projects)
     write_mentorships(mentorship_rows)
     write_internships(mentorship_rows)
+    write_good_first_issues(SKILL_SEARCHES)
 
     print(f"Updated {FIRST_TIME_PATH}")
     print(f"Updated {MENTORSHIPS_PATH}")
     print(f"Updated {INTERNSHIPS_PATH}")
+    print(f"Updated {GOOD_FIRST_ISSUES_DIR}")
 
 
 if __name__ == "__main__":
