@@ -1,6 +1,6 @@
 # CNCF Internships
 
-_Last updated: 2025-12-29 20:24 UTC_
+_Last updated: 2025-12-29 22:40 UTC_
 _Generated from LFX Mentorship API. Increase pagination with LFX_MAX_PAGES if needed._
 
 | Program | Org | Season | Application | Notes |

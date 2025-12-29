@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import json
 import os
 import re
@@ -11,6 +12,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "config" / "sources.json"
+SKILLS_PATH = ROOT / "config" / "skills.json"
 DATA_DIR = ROOT / "data"
 
 MENTORSHIPS_PATH = DATA_DIR / "mentorships.md"
@@ -20,80 +22,22 @@ GOOD_FIRST_ISSUES_DIR = DATA_DIR / "good_first_issues"
 
 USER_AGENT = "cncf-opportunities-updater/1.0"
 MAX_LFX_PAGES = int(os.environ.get("LFX_MAX_PAGES", "10"))
-MAX_GOOD_FIRST_ISSUES = int(os.environ.get("GOOD_FIRST_MAX", "30"))
+MAX_GOOD_FIRST_ISSUES = int(os.environ.get("GOOD_FIRST_MAX", "200"))
+GOOD_FIRST_REFRESH_DAYS = int(os.environ.get("GOOD_FIRST_REFRESH_DAYS", "7"))
 
-SKILL_SEARCHES = [
-    {
-        "name": "Python",
-        "filename": "python_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (python OR django OR flask) in:title,body',
-    },
-    {
-        "name": "PHP",
-        "filename": "php_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (php OR laravel OR symfony) in:title,body',
-    },
-    {
-        "name": "HTML",
-        "filename": "html_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (html OR css OR frontend) in:title,body',
-    },
-    {
-        "name": "CNCF Projects",
-        "filename": "cncf_projects.md",
-        "query": 'label:"good first issue" state:open -is:pr org:cncf',
-    },
-    {
-        "name": "Kubernetes",
-        "filename": "kubernetes_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (kubernetes OR k8s) in:title,body',
-    },
-    {
-        "name": "Security",
-        "filename": "security_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (security OR vulnerability OR secure) in:title,body',
-    },
-    {
-        "name": "Networking",
-        "filename": "networking_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (network OR networking OR dns OR tcp OR udp) in:title,body',
-    },
-    {
-        "name": "Git",
-        "filename": "git_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (git OR github) in:title,body',
-    },
-    {
-        "name": "Shell Scripting",
-        "filename": "shell_scripting_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (bash OR "shell script" OR shell) in:title,body',
-    },
-    {
-        "name": "Salt",
-        "filename": "salt_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (saltstack OR "salt") in:title,body',
-    },
-    {
-        "name": "Chef",
-        "filename": "chef_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (chef OR "chef infra") in:title,body',
-    },
-    {
-        "name": "Monitoring",
-        "filename": "monitoring_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (monitoring OR observability OR metrics) in:title,body',
-    },
-    {
-        "name": "SRE",
-        "filename": "sre_based.md",
-        "query": 'label:"good first issue" state:open -is:pr ("sre" OR reliability) in:title,body',
-    },
-    {
-        "name": "DevOps",
-        "filename": "devops_based.md",
-        "query": 'label:"good first issue" state:open -is:pr (devops OR cicd OR "ci/cd") in:title,body',
-    },
-]
+def load_skills():
+    if not SKILLS_PATH.exists():
+        raise FileNotFoundError(f"Missing skills file: {SKILLS_PATH}")
+    skills = json.loads(SKILLS_PATH.read_text())
+    if not isinstance(skills, list):
+        raise ValueError("config/skills.json must be a list of skill objects")
+    for skill in skills:
+        if not isinstance(skill, dict):
+            raise ValueError("Each skill must be an object with name, filename, and query")
+        for field in ("name", "filename", "query"):
+            if field not in skill or not skill[field]:
+                raise ValueError(f"Skill missing required field: {field}")
+    return skills
 
 
 def load_dotenv():
@@ -251,6 +195,30 @@ def search_github_issues(query, limit):
                 break
         page += 1
     return items
+
+
+def fetch_repo_stars(repo_full_name, cache):
+    if repo_full_name in cache:
+        return cache[repo_full_name]
+    url = f"https://api.github.com/repos/{repo_full_name}"
+    data = fetch_json(url, headers=github_headers())
+    stars = data.get("stargazers_count", 0)
+    cache[repo_full_name] = stars
+    return stars
+
+
+def repo_full_name_from_issue(issue):
+    repo_url = issue.get("repository_url") or ""
+    parts = repo_url.rsplit("/", 2)
+    if len(parts) != 3:
+        return ""
+    return f"{parts[1]}/{parts[2]}"
+
+
+def issue_sort_key(issue, star_cache):
+    repo_name = repo_full_name_from_issue(issue)
+    stars = fetch_repo_stars(repo_name, star_cache) if repo_name else 0
+    return (stars, issue.get("updated_at") or "")
 
 
 def format_terms(apprentice_needs):
@@ -413,28 +381,99 @@ def write_good_first_issues(skills):
     GOOD_FIRST_ISSUES_DIR.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     for skill in skills:
+        print(f"Fetching good first issues for {skill['name']}...")
         issues = search_github_issues(skill["query"], MAX_GOOD_FIRST_ISSUES)
+        print(f"  Retrieved {len(issues)} issues. Sorting by repo popularity...")
+        star_cache = {}
+        issues.sort(key=lambda issue: issue_sort_key(issue, star_cache), reverse=True)
         write_good_first_issue_file(skill, issues, timestamp)
+        print(f"  Wrote {skill['filename']}")
+
+
+def should_refresh_good_first_issues(force_refresh, skills=None):
+    if force_refresh:
+        return True
+    if skills:
+        existing_files = [GOOD_FIRST_ISSUES_DIR / skill["filename"] for skill in skills]
+    else:
+        existing_files = list(GOOD_FIRST_ISSUES_DIR.glob("*.md"))
+    if not existing_files:
+        return True
+    cutoff = datetime.now(timezone.utc).timestamp() - (GOOD_FIRST_REFRESH_DAYS * 86400)
+    stale = False
+    for path in existing_files:
+        if not path.exists():
+            return True
+        if path.stat().st_mtime < cutoff:
+            stale = True
+    return stale
+
+
+def find_skill_by_name(skill_name, skills):
+    normalized = skill_name.strip().lower()
+    for skill in skills:
+        if skill["name"].lower() == normalized:
+            return skill
+        if skill["filename"].lower() == normalized:
+            return skill
+    return None
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Update CNCF opportunities data.")
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="Force refresh of good first issues even if updated recently.",
+    )
+    parser.add_argument(
+        "--skill",
+        help="Refresh good first issues for a specific skill (name or filename).",
+    )
+    args = parser.parse_args()
     load_dotenv()
+    print("Loading sources...")
     sources = load_sources()
     landscape_url = sources.get("cncf_landscape_yaml")
     lfx_projects_url = sources.get("lfx_mentorship_projects")
     if not landscape_url or not lfx_projects_url:
         raise KeyError("Missing cncf_landscape_yaml or lfx_mentorship_projects in config/sources.json")
+    print("Fetching CNCF landscape...")
     landscape = fetch_yaml(landscape_url)
     cncf_projects = extract_cncf_projects(landscape)
+    print(f"Found {len(cncf_projects)} CNCF projects.")
 
+    print("Building CNCF first-time issues list...")
     first_time_rows = build_first_time_issues(cncf_projects)
     write_first_time(first_time_rows)
 
+    print("Fetching LFX mentorship projects...")
     lfx_projects = fetch_lfx_projects(lfx_projects_url)
+    print(f"Found {len(lfx_projects)} LFX projects.")
     mentorship_rows = build_mentorships(lfx_projects, cncf_projects)
     write_mentorships(mentorship_rows)
     write_internships(mentorship_rows)
-    write_good_first_issues(SKILL_SEARCHES)
+    skills = load_skills()
+    selected_skills = skills
+    if args.skill:
+        matched = find_skill_by_name(args.skill, skills)
+        if not matched:
+            print(f"Skill not found: {args.skill}")
+            print("Available skills: " + ", ".join(skill["name"] for skill in skills))
+            return
+        selected_skills = [matched]
+
+    if should_refresh_good_first_issues(args.refresh, selected_skills):
+        if args.skill:
+            print(f"Writing good first issues for {selected_skills[0]['name']}...")
+        else:
+            print("Writing skill-based good first issue lists...")
+        write_good_first_issues(selected_skills)
+    else:
+        if args.skill:
+            print("Skipping good first issues refresh (recently updated). Use --refresh to override.")
+        else:
+            print("Skipping good first issues refresh (recently updated). Use --refresh to override.")
 
     print(f"Updated {FIRST_TIME_PATH}")
     print(f"Updated {MENTORSHIPS_PATH}")
