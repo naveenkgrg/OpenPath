@@ -15,9 +15,9 @@ CONFIG_PATH = ROOT / "config" / "sources.json"
 SKILLS_PATH = ROOT / "config" / "skills.json"
 DATA_DIR = ROOT / "data"
 
-MENTORSHIPS_PATH = DATA_DIR / "mentorships.md"
-INTERNSHIPS_PATH = DATA_DIR / "internships.md"
-FIRST_TIME_PATH = DATA_DIR / "first_time_issues.md"
+MENTORSHIPS_PATH = DATA_DIR / "mentorships" / "mentorships.md"
+INTERNSHIPS_PATH = DATA_DIR / "internships" / "internships.md"
+FIRST_TIME_PATH = DATA_DIR / "good_first_issues" / "first_time_issues.md"
 GOOD_FIRST_ISSUES_DIR = DATA_DIR / "good_first_issues"
 
 USER_AGENT = "cncf-opportunities-updater/1.0"
@@ -287,6 +287,7 @@ def build_mentorships(lfx_projects, cncf_projects):
 
 def write_mentorships(rows):
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    MENTORSHIPS_PATH.parent.mkdir(parents=True, exist_ok=True)
     lines = [
         "# CNCF Mentorships",
         "",
@@ -303,6 +304,7 @@ def write_mentorships(rows):
 
 def write_internships(rows):
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    INTERNSHIPS_PATH.parent.mkdir(parents=True, exist_ok=True)
     lines = [
         "# CNCF Internships",
         "",
@@ -321,6 +323,7 @@ def write_internships(rows):
 
 def write_first_time(rows):
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    FIRST_TIME_PATH.parent.mkdir(parents=True, exist_ok=True)
     lines = [
         "# First-Time Issues (CNCF)",
         "",
