@@ -10,4 +10,5 @@ Authoritative sources used or recommended for this repo.
 | LFX Mentorship API | https://api.mentorship.lfx.linuxfoundation.org/projects | Used to scrape CNCF mentorships |
 | CNCF GitHub Orgs | https://github.com/cncf | Official GitHub org |
 | GitHub Search API | https://api.github.com/search/issues | Used to pull good first issues by skill |
+| YouTube Data API | https://developers.google.com/youtube/v3 | Optional learning resource videos |
 | OWASP Kubernetes Top Ten | https://owasp.org/www-project-kubernetes-top-ten/ | Kubernetes security guidance |

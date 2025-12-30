@@ -6,6 +6,7 @@ Static, human-friendly lists of CNCF-focused internships, mentorships, and first
 - `data/good_first_issues/` good first issue lists (auto-generated) + manual additions
 - `data/mentorships/` mentorship programs and manual notes
 - `data/internships/` internship programs, resources, and manual notes
+- `data/learning_resource/` skill-based learning resources (auto-generated) + manual additions
 - `data/sources.md` authoritative sources used by this repo
 
 ## Quick start
@@ -20,6 +21,7 @@ Disclaimer: Issues can close or change quickly, labels are project-specific (not
 This updates `data/mentorships/mentorships.md`, `data/internships/internships.md`, `data/good_first_issues/first_time_issues.md`, and `data/good_first_issues/` from LFX Mentorship, CNCF Landscape data, and GitHub Search.
 
 Skill queries live in `config/skills.json` and can be updated via PR to add or refine categories.
+Learning resource skills live in `config/learning_skills.json`.
 
 ```bash
 python3 scripts/update_opportunities.py
@@ -78,6 +80,22 @@ To force a fresh GitHub search (skip cache):
 ```bash
 python3 scripts/update_internship_resources.py --refresh
 ```
+
+## Update learning resources
+This generates skill-based learning resources under `data/learning_resource/` using GitHub search and optional YouTube data.
+
+```bash
+python3 scripts/update_learning_resources.py
+```
+
+To override defaults:
+
+```bash
+LEARN_MAX_REPOS=20 LEARN_MIN_STARS=100 LEARN_MAX_VIDEOS=10 LEARN_MIN_VIEWS=1000 LEARN_MIN_LIKES=100 \
+python3 scripts/update_learning_resources.py
+```
+
+To enable YouTube results, set `YOUTUBE_API_KEY` in `.env`.
 
 ## Contributing
 See `CONTRIBUTING.md` for how to add new entries or sources.
