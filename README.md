@@ -1,15 +1,11 @@
 # CNCF Opportunities Index
 
-Static, human-friendly lists of CNCF-focused internships, mentorships, first-time issues, and skill-based contribution paths. Includes a simple script to refresh CNCF project data from public sources.
+Static, human-friendly lists of CNCF-focused internships, mentorships, and first-time issues. Includes scripts to refresh data from public sources.
 
 ## What's inside
-- `data/projects.md` CNCF projects (auto-generated from CNCF Landscape data)
-- `data/projects_manual.md` hand-curated CNCF projects and notes
-- `data/internships.md` internship programs and links
-- `data/mentorships.md` mentorship programs and links
-- `data/first_time_issues.md` beginner-friendly issues or labels
-- `data/good_first_issues/` skill-based good first issues (auto-generated)
-- `data/skill_based_projects.md` projects grouped by skills
+- `data/good_first_issues/` good first issue lists (auto-generated) + manual additions
+- `data/mentorships/` mentorship programs and manual notes
+- `data/internships/` internship programs, resources, and manual notes
 - `data/sources.md` authoritative sources used by this repo
 
 ## Quick start
@@ -20,15 +16,8 @@ This is an open source index. Listings are generated from public sources and Git
 
 Disclaimer: Issues can close or change quickly, labels are project-specific (not a guarantee of difficulty), and this index does not endorse or vet projects. Always verify current status and use your own judgment.
 
-## Update CNCF project list
-This updates `data/projects.md` from the CNCF Landscape JSON.
-
-```bash
-python3 scripts/update_data.py
-```
-
 ## Update mentorships, internships, and first-time issues
-This updates `data/mentorships.md`, `data/internships.md`, `data/first_time_issues.md`, and `data/good_first_issues/` from LFX Mentorship, CNCF Landscape data, and GitHub Search.
+This updates `data/mentorships/mentorships.md`, `data/internships/internships.md`, `data/good_first_issues/first_time_issues.md`, and `data/good_first_issues/` from LFX Mentorship, CNCF Landscape data, and GitHub Search.
 
 Skill queries live in `config/skills.json` and can be updated via PR to add or refine categories.
 
@@ -68,6 +57,26 @@ To increase LFX pagination (default 10 pages):
 
 ```bash
 LFX_MAX_PAGES=50 python3 scripts/update_opportunities.py
+```
+
+## Update internship resources from GitHub
+This searches GitHub repositories that list internship resources and writes `data/internships/internship_resources.md`.
+
+```bash
+python3 scripts/update_internship_resources.py
+```
+
+To adjust thresholds:
+
+```bash
+INTERNSHIP_MAX=150 INTERNSHIP_MIN_STARS=100 INTERNSHIP_MIN_WATCHERS=100 \
+python3 scripts/update_internship_resources.py
+```
+
+To force a fresh GitHub search (skip cache):
+
+```bash
+python3 scripts/update_internship_resources.py --refresh
 ```
 
 ## Contributing

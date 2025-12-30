@@ -3,7 +3,7 @@
 Thanks for improving this index. Please keep entries concise, link to authoritative sources, and prefer CNCF-hosted or project-owned references.
 
 ## Add or update entries
-- Edit the relevant file in `data/`
+- Edit the relevant file in `data/good_first_issues/`, `data/mentorships/`, or `data/internships/`
 - Keep names and URLs accurate
 - Use short descriptions (one line)
 
@@ -12,8 +12,4 @@ Thanks for improving this index. Please keep entries concise, link to authoritat
 - If the source is machine-readable, also add it to `config/sources.json`
 
 ## Running updates
-To refresh `data/projects.md` from the CNCF Landscape:
-
-```bash
-python3 scripts/update_data.py
-```
+Use the scripts referenced in `README.md` to refresh generated data.
