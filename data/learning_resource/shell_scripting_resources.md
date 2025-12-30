@@ -1,0 +1,34 @@
+# Learning Resources: Shell Scripting
+
+_Last updated: 2025-12-30 03:46 UTC_
+
+## GitHub Repositories
+
+| Repo | Description / Details | Link |
+| --- | --- | --- |
+| codecrafters-io/build-your-own-x | Master programming by recreating your favorite technologies from scratch. (Stars: 452913, Updated: 2025-12-30) | https://github.com/codecrafters-io/build-your-own-x |
+| sindresorhus/awesome | 😎 Awesome lists about all kinds of interesting topics (Stars: 425899, Updated: 2025-12-30) | https://github.com/sindresorhus/awesome |
+| kamranahmedse/developer-roadmap | Interactive roadmaps, guides and other educational content to help developers grow in their careers. (Stars: 346306, Updated: 2025-12-30) | https://github.com/kamranahmedse/developer-roadmap |
+| jwasham/coding-interview-university | A complete computer science study plan to become a software engineer. (Stars: 335403, Updated: 2025-12-30) | https://github.com/jwasham/coding-interview-university |
+| vinta/awesome-python | An opinionated list of awesome Python frameworks, libraries, software and resources. (Stars: 275949, Updated: 2025-12-30) | https://github.com/vinta/awesome-python |
+| awesome-selfhosted/awesome-selfhosted | A list of Free Software network services and web applications which can be hosted on your own servers (Stars: 265582, Updated: 2025-12-30) | https://github.com/awesome-selfhosted/awesome-selfhosted |
+| practical-tutorials/project-based-learning | Curated list of project-based tutorials (Stars: 253933, Updated: 2025-12-30) | https://github.com/practical-tutorials/project-based-learning |
+| trimstray/the-book-of-secret-knowledge | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more. (Stars: 200380, Updated: 2025-12-30) | https://github.com/trimstray/the-book-of-secret-knowledge |
+| ossu/computer-science | 🎓 Path to a free self-taught education in Computer Science! (Stars: 199582, Updated: 2025-12-30) | https://github.com/ossu/computer-science |
+| trekhleb/javascript-algorithms | 📝 Algorithms and data structures implemented in JavaScript with explanations and links to further readings (Stars: 195231, Updated: 2025-12-30) | https://github.com/trekhleb/javascript-algorithms |
+| ohmyzsh/ohmyzsh | 🙃   A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community. (Stars: 183627, Updated: 2025-12-30) | https://github.com/ohmyzsh/ohmyzsh |
+| Significant-Gravitas/AutoGPT | AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters. (Stars: 180632, Updated: 2025-12-30) | https://github.com/Significant-Gravitas/AutoGPT |
+| jackfrued/Python-100-Days | Python - 100天从新手到大师 (Stars: 176972, Updated: 2025-12-30) | https://github.com/jackfrued/Python-100-Days |
+| avelino/awesome-go | A curated list of awesome Go frameworks, libraries and software (Stars: 161253, Updated: 2025-12-30) | https://github.com/avelino/awesome-go |
+| jlevy/the-art-of-command-line | Master the command line, in one page (Stars: 159274, Updated: 2025-12-30) | https://github.com/jlevy/the-art-of-command-line |
+| ollama/ollama | Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models. (Stars: 158452, Updated: 2025-12-30) | https://github.com/ollama/ollama |
+| Snailclimb/JavaGuide | Java 学习&面试指南（Go、Python 后端面试通用,计算机基础面试总结）。准备后端技术面试，首选 JavaGuide！ (Stars: 153256, Updated: 2025-12-30) | https://github.com/Snailclimb/JavaGuide |
+| yt-dlp/yt-dlp | A feature-rich command-line audio/video downloader (Stars: 139931, Updated: 2025-12-30) | https://github.com/yt-dlp/yt-dlp |
+| ytdl-org/youtube-dl | Command-line program to download videos from YouTube.com and other video sites (Stars: 139293, Updated: 2025-12-29) | https://github.com/ytdl-org/youtube-dl |
+| ripienaar/free-for-dev | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev (Stars: 116659, Updated: 2025-12-30) | https://github.com/ripienaar/free-for-dev |
+
+## YouTube Videos
+
+| Title | Channel / Stats | Link |
+| --- | --- | --- |
+| _No results or no API key_ | _Set YOUTUBE_API_KEY to enable_ | _N/A_ |

@@ -3,7 +3,7 @@
 Thanks for improving this index. Please keep entries concise, link to authoritative sources, and prefer CNCF-hosted or project-owned references.
 
 ## Add or update entries
-- Edit the relevant file in `data/good_first_issues/`, `data/mentorships/`, or `data/internships/`
+- Edit the relevant file in `data/good_first_issues/`, `data/mentorships/`, `data/internships/`, or `data/learning_resource/`
 - Keep names and URLs accurate
 - Use short descriptions (one line)
 
