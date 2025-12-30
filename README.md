@@ -6,6 +6,8 @@ Static, human-friendly lists of CNCF-focused internships, mentorships, and first
 - `data/good_first_issues/` good first issue lists (auto-generated) + manual additions
 - `data/mentorships/` mentorship programs and manual notes
 - `data/internships/` internship programs, resources, and manual notes
+- `data/internships/success_stories.md` community success stories
+- `data/mentorships/reach_out.md` guidance for contacting maintainers or mentors
 - `data/learning_resource/` skill-based learning resources (auto-generated) + manual additions
 - `data/sources.md` authoritative sources used by this repo
 
@@ -16,6 +18,8 @@ Static, human-friendly lists of CNCF-focused internships, mentorships, and first
 This is an open source index. Listings are generated from public sources and GitHub label searches (for example `good first issue`), so inclusion is not a personal recommendation and labels can vary by project. Before contributing, review each project's contribution guidelines and scope, and confirm the issue is a good fit.
 
 Disclaimer: Issues can close or change quickly, labels are project-specific (not a guarantee of difficulty), and this index does not endorse or vet projects. Always verify current status and use your own judgment.
+
+If this project helps you land an internship, job, or meaningful contribution, please share your story in `data/internships/success_stories.md`.
 
 ## Update mentorships, internships, and first-time issues
 This updates `data/mentorships/mentorships.md`, `data/internships/internships.md`, `data/good_first_issues/first_time_issues.md`, and `data/good_first_issues/` from LFX Mentorship, CNCF Landscape data, and GitHub Search.
@@ -99,3 +103,15 @@ To enable YouTube results, set `YOUTUBE_API_KEY` in `.env`.
 
 ## Contributing
 See `CONTRIBUTING.md` for how to add new entries or sources.
+
+## How to contribute (quick guide)
+1) Pick the right folder: `data/good_first_issues/`, `data/mentorships/`, `data/internships/`, or `data/learning_resource/`.
+2) For manual updates, use the `manual_*.md` files in each folder so automation does not overwrite your changes.
+3) Keep entries concise, link to authoritative sources, and verify the info before submitting a PR.
+4) If you add a new skill category, update `config/skills.json` (good first issues) or `config/learning_skills.json` (learning resources).
+5) Run the relevant script to regenerate auto files if your change affects generated content.
+
+## For maintainers
+- Ensure auto-generated files are updated via scripts before merging.
+- Confirm manual edits are placed in `manual_*.md` files.
+- Validate new skill entries include `name`, `filename`, and a sensible query/keywords.
