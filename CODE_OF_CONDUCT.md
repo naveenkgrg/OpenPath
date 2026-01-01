@@ -1,24 +1,25 @@
 # Code of Conduct
 
-We follow the Contributor Covenant to foster a welcoming and respectful community.
+OpenPath is a friendly, inclusive community. We expect everyone to act with respect, kindness, and professionalism.
 
-## Our Pledge
-We are committed to providing a harassment-free experience for everyone, regardless of background.
+## Expected behavior
 
-## Our Standards
-Examples of behavior that contributes to a positive environment include:
-- Being respectful and considerate
-- Welcoming newcomers and being inclusive
-- Giving and accepting constructive feedback
+- Be welcoming and patient with beginners.
+- Assume good intent and communicate clearly.
+- Give constructive feedback and accept it gracefully.
+- Respect different backgrounds, identities, and perspectives.
 
-Examples of unacceptable behavior include:
-- Harassment, discrimination, or hateful conduct
-- Trolling or personal attacks
-- Publishing others' private information
+## Unacceptable behavior
+
+- Harassment, discrimination, or hateful language.
+- Personal attacks, threats, or intimidation.
+- Sharing private information without permission.
+- Disruptive behavior that prevents others from contributing.
+
+## Reporting
+
+If you experience or witness unacceptable behavior, please report it by opening a private issue or emailing the maintainers listed in the repository.
 
 ## Enforcement
-If you experience or witness unacceptable behavior, please open an issue or contact the maintainers.
 
-## Attribution
-This code of conduct is adapted from the Contributor Covenant, version 2.1.
-https://www.contributor-covenant.org/version/2/1/code_of_conduct/
+Maintainers may remove content, reject PRs, or restrict participation to keep the community safe and constructive.

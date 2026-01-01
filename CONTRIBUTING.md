@@ -1,27 +1,28 @@
-# Contributing
+# Contributing to OpenPath
 
-Thanks for improving this index. Please keep entries concise, link to authoritative sources, and prefer CNCF-hosted or project-owned references.
+Thanks for helping build a beginner-friendly, community-curated guide. Please keep contributions simple and respectful.
 
-## Add or update entries
-1) Choose the right folder: `data/good_first_issues/`, `data/mentorships/`, `data/internships/`, or `data/learning_resource/`.
-2) Use the manual files (`manual_*.md`) for hand-curated additions so automation does not overwrite your changes.
-3) Keep names and URLs accurate.
-4) Use short descriptions (one line).
+## Simple rules
 
-Manual files:
-- `data/good_first_issues/manual_good_first_issues.md`
-- `data/mentorships/manual_mentorships.md`
-- `data/internships/manual_internship_resources.md`
-- `data/learning_resource/manual_learning_resources.md`
+- One change per PR is preferred when possible.
+- Keep lists to the top 5–10 entries per section.
+- Add a "Last reviewed" date when you add or update a row.
+- No paid promotions or affiliate links.
+- Keep tone neutral and beginner-friendly.
+- Explain why a source is trusted in one short phrase.
 
-## Data sources
-- Add new sources to `data/sources.md`
-- If the source is machine-readable, also add it to `config/sources.json`
+## PR checklist
 
-## Running updates
-Use the scripts referenced in `README.md` to refresh generated data.
+- I kept the change focused and easy to review.
+- I added or updated "Last reviewed" dates.
+- I used neutral, non-commercial language.
+- I explained why the source is trusted.
+- I verified links are stable and relevant.
 
-## Maintainers
-- Confirm generated files are up to date before merging.
-- Ensure manual edits live in `manual_*.md`.
-- Verify new skills in `config/skills.json` or `config/learning_skills.json` have valid fields.
+## Review checklist
+
+- The change aligns with OpenPath's beginner-friendly goals.
+- Sources are free, vendor-neutral, and non-commercial.
+- The "Why it's trusted" field is clear and reasonable.
+- Lists stay concise and not overly promotional.
+- Formatting matches the existing Markdown style.
