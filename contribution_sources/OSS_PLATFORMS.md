@@ -56,15 +56,6 @@ The focus is on **where to start**, not on ranking platforms.
 
 ---
 
-## Free Software Foundation
-
-- **What it is:** An organization promoting free software and user freedoms.
-- **Who it’s for:** Contributors interested in software freedom, ethics, and licensing.
-- **How beginners contribute:** Documentation, advocacy, translations.
-- **Where to start:** https://www.fsf.org/volunteer
-
----
-
 ## Python Software Foundation
 
 - **What it is:** The nonprofit organization behind the Python language ecosystem.
