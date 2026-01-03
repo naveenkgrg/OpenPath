@@ -26,6 +26,7 @@ that consistently share such opportunities.
 | Program / Source | What it Offers | Eligibility Hints | Link | Last Reviewed |
 |------------------|---------------|-------------------|------|---------------|
 | CNCF Mentorship | Structured mentorship for cloud-native OSS | Beginner-friendly | https://github.com/cncf/mentoring | 2025-01-01 |
+| CNCF Students | Student-focused OSS programs and guidance | Students and early-career contributors | https://github.com/cncf/students | 2025-01-01 |
 | Apache Mentoring | Guidance for contributors to Apache projects | Active interest in Apache projects | https://community.apache.org/mentoring.html | 2025-01-01 |
 | Mozilla Mentorship | Mentorship for OSS and web projects | Open to beginners | https://mozilla.github.io/contribute | 2025-01-01 |
 
