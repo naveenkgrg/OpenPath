@@ -312,7 +312,7 @@ Click on the commit message or the clock icon to see your full commit history.
 
 ---
 
-## Step 8 — Create Your GitHub Profile README (About Me Page)
+## Step 9 — Create Your GitHub Profile README (About Me Page)
 
 GitHub has a special feature: a repository named exactly the same as your username will display its `README.md` at the top of your GitHub profile page — visible to anyone who visits your profile.
 
