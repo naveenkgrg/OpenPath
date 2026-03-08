@@ -1,54 +1,40 @@
-# Beginner-Friendly Open Source Project Directories
+# Beginner Contribution Sources
 
-## Purpose
+These tools and sites help you find beginner-friendly open-source issues across thousands of projects. Use them when you are ready to make a real contribution and need to find a starting point.
 
-This document **curates the curators** — trusted GitHub repositories and platforms that
-actively maintain lists of **beginner-friendly open-source projects**, first issues, and
-contribution entry points.
-
-OpenPath intentionally lists **high-quality, well-maintained sources** instead of attempting
-to track individual issues or projects.
+Before using any of these, read `contribution_sources/HOW_TO_CONTRIBUTE.md` to understand how to evaluate a project and write a contribution that gets merged.
 
 ---
 
-## Curated Sources
+## Issue finders
 
-| Source | What it Provides | Why It’s Trusted | Link | Last Reviewed |
-|------|------------------|------------------|------|---------------|
-| **First Contributions** | Step-by-step guide + practice repo for first OSS PRs | Widely adopted, very beginner-friendly, active community | https://github.com/firstcontributions/first-contributions | 2025-01-01 |
-| **Awesome for Beginners** | Aggregated list of projects with beginner issues | Long-running curated list, multi-language coverage | https://github.com/MunGell/awesome-for-beginners | 2025-01-01 |
-| **Good First Issue** | Searchable index of repositories with beginner issues | Uses GitHub labels, widely referenced | https://goodfirstissue.dev | 2025-01-01 |
-| **Up For Grabs** | Projects that actively label beginner tasks | Clear maintainer intent, long-standing project | https://up-for-grabs.net | 2025-01-01 |
-| **CodeTriage** | Helps newcomers discover issues to work on | Community-supported, integrates with GitHub | https://www.codetriage.com | 2025-01-01 |
-| **GitHub Explore (Open Source)** | Official GitHub discovery surface | Backed by GitHub, reflects active repositories | https://github.com/explore | 2025-01-01 |
-| **24 Pull Requests (Projects List)** | Beginner-friendly OSS discovery + seasonal contributions | Community-driven, contribution-focused culture | https://24pullrequests.com/projects | 2025-01-01 |
-| **Open Source Friday** | Beginner-friendly OSS discovery & guidance | GitHub-led initiative promoting OSS contributions | https://opensourcefriday.com | 2025-01-01 |
-
----
-
-## Inclusion Criteria
-
-Sources listed here are selected based on **transparent, observable signals**, such as:
-- Active maintenance and recent updates
-- Clear use of beginner-friendly labels or guidance
-- Strong community adoption (stars, forks, contributors)
-- Maintainer intent that welcomes new contributors
+| Resource | What it does | Last Reviewed |
+|----------|-------------|---------------|
+| [Good First Issue](https://goodfirstissue.dev) | Aggregates `good first issue` labeled issues across popular GitHub repos, filterable by language | 2026-03 |
+| [Up For Grabs](https://up-for-grabs.net) | Curated list of projects that explicitly label tasks for new contributors | 2026-03 |
+| [CodeTriage](https://www.codetriage.com) | Sends you open issues from chosen repos by email — good for staying consistent | 2026-03 |
+| [Awesome for Beginners](https://github.com/MunGell/awesome-for-beginners) | Community-maintained list of projects with beginner-friendly labels, organized by language | 2026-03 |
+| [First Contributions](https://firstcontributions.github.io) | Practice making your first PR in a safe environment; also lists real projects by language | 2026-03 |
+| [GitHub Explore](https://github.com/explore) | GitHub's native discovery — filter by topic, language, or trending to find active projects | 2026-03 |
+| [24 Pull Requests](https://24pullrequests.com) | Annual December initiative encouraging contributors to make 24 PRs; highlights beginner-friendly projects | 2026-03 |
+| [Open Source Friday](https://opensourcefriday.com) | GitHub's campaign to contribute on Fridays — highlights active projects welcoming help | 2026-03 |
 
 ---
 
-## How to Add or Update a Source
+## How to use these effectively
 
-1. Fork the repository and create a new branch.
-2. Add a new row to the table with:
-   - A clear description of *what the source provides*
-   - A concise explanation of *why it is trusted*
-   - A recent **Last Reviewed** date
-3. Open a pull request explaining why the source should be included or updated.
+**Start narrow.** Pick one language or ecosystem you know, then filter for that. A JavaScript developer looking at Python issues will have a harder time — start where your skills already are.
 
-> Quality matters more than quantity.  
-> Please avoid adding duplicate, inactive, or promotional sources.
+**Read the issue fully.** Before claiming an issue, read the full thread. Sometimes the solution is already discussed, or the issue has been resolved informally without being closed.
+
+**Comment before starting.** Say you are working on it. This prevents two people submitting duplicate PRs for the same issue.
+
+**Check for recent activity.** An issue open for 2 years with no comments may be stale or deprioritized. Look for issues opened or commented on in the past few months.
 
 ---
 
-*This list helps learners find where to start — not what to work on.  
-Exploration and due diligence remain the responsibility of the contributor.*
+## Cross-links
+
+- How to evaluate a project and write a quality PR: `contribution_sources/HOW_TO_CONTRIBUTE.md`
+- Major OSS ecosystems to explore: `contribution_sources/OSS_PLATFORMS.md`
+- Structured internship programs: `contribution_sources/INTERNSHIPS_AND_MENTORSHIP.md`

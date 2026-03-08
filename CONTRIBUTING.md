@@ -1,28 +1,54 @@
 # Contributing to OpenPath
 
-Thanks for helping build a beginner-friendly, community-curated guide. Please keep contributions simple and respectful.
+Thank you for helping improve OpenPath. This is a community resource — contributions keep it accurate, current, and useful.
 
-## Simple rules
+---
 
-- One change per PR is preferred when possible.
-- Keep lists to the top 5–10 entries per section.
-- Add a "Last reviewed" date when you add or update a row.
-- No paid promotions or affiliate links.
-- Keep tone neutral and beginner-friendly.
-- Explain why a source is trusted in one short phrase.
+## What we accept
 
-## PR checklist
+- New entries for beginner-friendly issue finders, OSS platforms, internship programs, or free learning resources
+- Corrections to outdated links or descriptions
+- New contributor success stories (using the template in `success_stories/SUCCESS_STORIES.md`)
+- Improvements to labs or the learning path
 
-- I kept the change focused and easy to review.
-- I added or updated "Last reviewed" dates.
-- I used neutral, non-commercial language.
-- I explained why the source is trusted.
-- I verified links are stable and relevant.
+## What we do not accept
 
-## Review checklist
+- Paid products, affiliate links, or vendor-locked content
+- Resources that require sign-up fees or paid subscriptions
+- Self-promotional content without community validation
+- Inactive or unmaintained projects (check for activity in the past 12 months)
 
-- The change aligns with OpenPath's beginner-friendly goals.
-- Sources are free, vendor-neutral, and non-commercial.
-- The "Why it's trusted" field is clear and reasonable.
-- Lists stay concise and not overly promotional.
-- Formatting matches the existing Markdown style.
+---
+
+## Guidelines
+
+### Keep sections focused
+Each section should contain **5–10 entries maximum**. Quality over quantity. If you are adding something, consider whether an existing entry should be removed.
+
+### Last Reviewed dates
+Every table row must include a **Last Reviewed** date in `YYYY-MM` format. Update the date when you verify a link still works and the resource is still active.
+
+### One PR at a time
+Open one pull request per topic or section. Keep PRs small and focused — easier to review, easier to merge.
+
+### Explain your addition
+In your PR description, briefly answer:
+- What is this resource?
+- Why is it trusted and community-maintained?
+- Who is the intended audience (beginner, intermediate, specific ecosystem)?
+
+---
+
+## How to contribute
+
+1. Fork this repository.
+2. Create a branch: `git checkout -b your-change-description`.
+3. Make your changes.
+4. Open a pull request against the `main` branch.
+5. Fill in the PR description with the rationale above.
+
+---
+
+## Questions
+
+Open an issue if you are unsure whether a contribution fits, or if you want to discuss an idea before writing it up.

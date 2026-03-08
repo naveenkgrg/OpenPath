@@ -1,50 +1,62 @@
-# Learning Resources
+# Free Learning Resources
 
-This document lists **trusted, community-maintained GitHub repositories**
-that curate **free learning resources, courses, and free certifications**.
-The focus is on **high-signal sources** that are actively maintained and widely used.
+Curated free resources for learning programming, computer science, cloud infrastructure, security, and open-source workflows. Everything listed here is free to access, community-maintained, and actively used.
 
-OpenPath intentionally limits this list to avoid noise and duplication.
+No paid courses, no affiliate links.
 
 ---
 
-## Curated Learning Repositories (Free)
+## General Programming and Computer Science
 
-| Resource | Topics | Why It’s Useful | Link | Last Reviewed |
-|---------|--------|----------------|------|---------------|
-| free-programming-books | Programming, CS, Dev | One of the most widely used curated lists of free books, courses, and tutorials across languages | https://github.com/EbookFoundation/free-programming-books | 2025-01-01 |
-| freeCodeCamp | Full-stack dev, Cloud, DevOps | Free interactive curriculum with globally recognized free certifications | https://github.com/freeCodeCamp/freeCodeCamp | 2025-01-01 |
-| OSSU Computer Science | Computer science fundamentals | Community-curated full CS curriculum using only free resources | https://github.com/ossu/computer-science | 2025-01-01 |
-| Free-Certifications (cloudcommunity) | Free certifications | Curated list of free courses that provide certificates | https://github.com/cloudcommunity/Free-Certifications | 2025-01-01 |
-| Awesome | All technology domains | Meta-list of high-quality curated lists, including learning resources | https://github.com/sindresorhus/awesome | 2025-01-01 |
-| Awesome Software Engineering | Software engineering | Curated resources covering engineering practices and fundamentals | https://github.com/Alliedium/awesome-software-engineering | 2025-01-01 |
-| Kubernetes Learning Resources | Kubernetes, Cloud-Native | Community-maintained learning links for Kubernetes and CNCF projects | https://github.com/kubernetes/community/tree/master/mentoring | 2025-01-01 |
-| OWASP Learn Project | Application security | Free, community-driven security learning materials | https://github.com/OWASP/OWASP-Learning | 2025-01-01 |
-| GitHub Skills | Git, GitHub, OSS workflows | Hands-on labs for real GitHub contribution workflows | https://github.com/skills | 2025-01-01 |
+| Resource | What it covers | Last Reviewed |
+|----------|---------------|---------------|
+| [free-programming-books](https://github.com/EbookFoundation/free-programming-books) | Massive curated list of free programming books across hundreds of languages and topics | 2026-03 |
+| [freeCodeCamp](https://www.freecodecamp.org) | Structured curriculum covering web dev, Python, data science, and more — interactive and free | 2026-03 |
+| [OSSU Computer Science](https://github.com/ossu/computer-science) | Open-source CS degree curriculum using free online courses (MIT, Stanford, etc.) | 2026-03 |
+| [Free-Certifications](https://github.com/cloudcommunity/Free-Certifications) | Curated list of free certification courses across cloud, security, and development | 2026-03 |
+| [Awesome](https://github.com/sindresorhus/awesome) | Meta-list of curated lists covering almost every programming language and tool | 2026-03 |
 
 ---
 
-## Notes on Certifications and Vendor Content
+## Git and Open Source Workflows
 
-- Some resources include **vendor-backed courses or certifications**.
-- They are listed **only when free access is available**.
-- OpenPath does not promote paid courses or affiliate content.
-
----
-
-## Selection Criteria
-
-Resources included here typically meet the following:
-- Free to access
-- Community-maintained or foundation-backed
-- Beginner-friendly and widely referenced
-- Actively maintained or periodically updated
+| Resource | What it covers | Last Reviewed |
+|----------|---------------|---------------|
+| [GitHub Skills](https://skills.github.com) | Short, interactive courses on Git, GitHub workflows, Actions, and more — runs in your browser | 2026-03 |
+| [First Contributions](https://firstcontributions.github.io) | Beginner-friendly practice for the fork-and-PR workflow; also lists real projects | 2026-03 |
 
 ---
 
-## How to Add a Resource
+## Security
 
-1. Propose a new resource via pull request.
-2. Explain **why it adds unique value** and is actively maintained.
-3. Include a **Last Reviewed** date.
-4. Keep the total list focused (avoid duplicates).
+| Resource | What it covers | Last Reviewed |
+|----------|---------------|---------------|
+| [OWASP Learning Path](https://owasp.org/www-project-integration-standards/) | Web application security concepts, vulnerabilities, and testing — the industry standard | 2026-03 |
+| [OWASP WebGoat](https://owasp.org/www-project-webgoat/) | Deliberately insecure application for learning web security hands-on | 2026-03 |
+
+---
+
+## Cloud and Infrastructure
+
+| Resource | What it covers | Last Reviewed |
+|----------|---------------|---------------|
+| [Kubernetes Learning Path](https://kubernetes.io/docs/tutorials/) | Official Kubernetes tutorials — from basics to production concepts | 2026-03 |
+| [Linux Foundation Free Courses](https://training.linuxfoundation.org/resources/?_sft_content_type=free-course) | Free courses on Linux, Kubernetes, DevOps, and open-source fundamentals | 2026-03 |
+
+---
+
+## How to use this list
+
+Pick **one resource** that matches your current level and goal. Go through it consistently before jumping to another. The most common mistake is collecting resources without making progress on any of them.
+
+If you are a complete beginner: start with **freeCodeCamp** or **GitHub Skills**.
+If you want a structured CS foundation: start with **OSSU Computer Science**.
+If you are focused on cloud and infrastructure: start with **Kubernetes Learning Path** or **Linux Foundation Free Courses**.
+If you are interested in security: start with the **OWASP Learning Path**.
+
+---
+
+## Cross-links
+
+- Structured learning journey: `learning_path/STUDENT_JOB_SEEKER_PATH.md`
+- After learning: where to find your first issue: `contribution_sources/OSS_BEGINNER_CONTRIBUTION_SOURCES.md`

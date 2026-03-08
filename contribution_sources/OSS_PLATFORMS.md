@@ -1,75 +1,40 @@
-# Open-Source Platforms for Beginner Contributors
+# Open Source Foundations and Platforms
 
-This document provides a **high-level overview of major open-source platforms**
-where beginners can explore projects, communities, and contribution pathways.
-The focus is on **where to start**, not on ranking platforms.
+These are the major open-source foundations and ecosystems where contributors build careers, find mentorship, and make lasting impact. Each has its own project portfolio, community norms, and contribution pathways.
 
----
-
-## Cloud Native Computing Foundation (CNCF)
-- **What it is:** A foundation hosting cloud-native open-source projects.
-- **Who it’s for:** Contributors interested in containers, Kubernetes, observability, and DevOps.
-- **How beginners contribute:** Documentation, small issues, examples, community discussions.
-- **Where to start:** https://landscape.cncf.io
----
-
-## OWASP
-- **What it is:** A global community focused on open-source application security.
-- **Who it’s for:** Learners interested in secure coding and security awareness.
-- **How beginners contribute:** Documentation, testing guides, labs, project support.
-- **Where to start:** https://owasp.org/projects
+Understanding these ecosystems helps you pick projects that align with your interests and goals.
 
 ---
 
-## Mozilla
-- **What it is:** An open-source organization building web technologies and standards.
-- **Who it’s for:** Contributors interested in browsers, web tools, and open internet projects.
-- **How beginners contribute:** Good first issues, documentation, localization.
-- **Where to start:** https://mozilla.github.io/contribute
+## Foundations
+
+| Foundation | Focus Area | Beginner-Friendly | Last Reviewed |
+|------------|-----------|-------------------|---------------|
+| [CNCF](https://www.cncf.io) | Cloud-native: Kubernetes, Prometheus, Envoy, and 100+ projects | Yes — has sandbox and incubating projects with active mentorship | 2026-03 |
+| [OWASP](https://owasp.org) | Application security tools, standards, and education | Yes — many documentation and tool projects welcome beginners | 2026-03 |
+| [Mozilla](https://www.mozilla.org/en-US/contribute/) | Firefox, Thunderbird, web standards | Yes — has "Good First Bug" labels across projects | 2026-03 |
+| [Apache Software Foundation](https://www.apache.org/foundation/getinvolved.html) | Web servers, big data (Kafka, Spark), languages | Moderate — community norms vary by project | 2026-03 |
+| [Linux Foundation](https://www.linuxfoundation.org) | Linux kernel, networking, security, cloud | Moderate — hosts LFX Mentorship for structured entry | 2026-03 |
+| [Eclipse Foundation](https://www.eclipse.org/contribute/) | IDEs, IoT, Jakarta EE, automotive | Moderate — larger, more structured projects | 2026-03 |
+| [Python Software Foundation](https://www.python.org/psf/contributing/) | CPython, Python documentation, PyPI | Yes — CPython and docs have active newcomer programs | 2026-03 |
 
 ---
 
-## Apache Software Foundation
+## Notes on getting started
 
-- **What it is:** A foundation supporting hundreds of mature open-source projects.
-- **Who it’s for:** Contributors who want to work in large, well-established communities.
-- **How beginners contribute:** Documentation, testing, small bug fixes.
-- **Where to start:** https://www.apache.org/contribute
+**CNCF** is one of the most active ecosystems for cloud and infrastructure contributors. Start with smaller CNCF sandbox projects rather than Kubernetes itself, which has a steep ramp. The LFX Mentorship program runs multiple CNCF cohorts each year.
 
----
+**OWASP** is well-suited for people interested in security. Many projects focus on documentation, testing tools, and security guides — not just code. Look at OWASP Juice Shop, OWASP ZAP, and OWASP WSTG.
 
-## Linux Foundation
+**Mozilla** welcomes non-code contributions heavily — localization, testing, documentation, and user support all count. Good for beginners who are not yet confident writing code.
 
-- **What it is:** A nonprofit supporting critical open-source infrastructure projects.
-- **Who it’s for:** Contributors interested in systems, networking, and large-scale platforms.
-- **How beginners contribute:** Documentation, community issues, small improvements.
-- **Where to start:** https://www.linuxfoundation.org/projects
+**Apache** uses mailing lists and community consensus more than GitHub-style PRs. The culture is different — read the Apache Way documentation before engaging.
+
+**Linux Foundation** hosts the LFX Mentorship program, which is one of the most structured paths into open source for students. See `contribution_sources/INTERNSHIPS_AND_MENTORSHIP.md`.
 
 ---
 
-## Eclipse Foundation
+## Cross-links
 
-- **What it is:** A foundation hosting open-source projects across cloud, IoT, and developer tooling.
-- **Who it’s for:** Contributors interested in developer tools, runtimes, and enterprise OSS.
-- **How beginners contribute:** Documentation, starter issues, testing.
-- **Where to start:** https://www.eclipse.org/contribute
-
----
-
-## Python Software Foundation
-
-- **What it is:** The nonprofit organization behind the Python language ecosystem.
-- **Who it’s for:** Contributors interested in programming languages and developer tooling.
-- **How beginners contribute:** Documentation, tests, beginner-friendly issues.
-- **Where to start:** https://www.python.org/dev/guide
-
----
-
-## Notes for Contributors
-
-- These platforms are listed as **entry points**, not endorsements.
-- Always read a project’s `CONTRIBUTING.md` and code of conduct before participating.
-- Use community signals such as activity, responsiveness, and documentation quality.
-
-If you know another platform that meets OpenPath’s inclusion criteria,
-please propose it via a pull request with a short rationale.
+- Structured entry programs for these ecosystems: `contribution_sources/INTERNSHIPS_AND_MENTORSHIP.md`
+- Tools for finding specific beginner issues: `contribution_sources/OSS_BEGINNER_CONTRIBUTION_SOURCES.md`

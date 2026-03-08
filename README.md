@@ -1,58 +1,52 @@
 # OpenPath
 
-OpenPath is a **non-commercial, community-driven, Markdown-only repository** designed to help people **discover open-source contribution paths, sharpen skills using free resources, and build visible participation in open ecosystems**.
+**OpenPath** is a community-driven, non-commercial resource for people who want to start contributing to open source — or go deeper.
 
-The goal of OpenPath is to highlight trusted sources using transparent community signals (active maintenance, adoption, forks, and contribution activity) and to invite the community to improve these lists through pull requests.
----
+It covers:
+- Where to find beginner-friendly issues across the open-source ecosystem
+- How to evaluate and contribute to projects responsibly
+- Free learning resources across programming, cloud, security, and more
+- Internship and mentorship programs for students and early-career contributors
+- Real contributor success stories
 
-## What OpenPath Provides
-
-- **Curated contribution sources**  
-  Trusted repositories, platforms, and websites that maintain beginner-friendly open-source projects, first issues, internships, mentorships, and remote opportunities.
-
-- **Open-source platform awareness**  
-  Guidance on exploring major open-source ecosystems (such as CNCF and OWASP) and understanding how and where beginners can contribute.
-
-- **Hands-on learning & demos**  
-  Practical, hands-on labs (for example, Prometheus and Grafana) to demonstrate real CNCF projects and help learners connect concepts with real systems.
-
-- **Free learning resources & paths**  
-  Curated learning resources and simple learning paths to help build contribution-ready skills.  
-  Vendor-based resources or certifications may be included **only if they are freely accessible**.
-
-- **Community success stories**  
-  A place for learners to share how they made their first contribution, found an internship, gained recognition, or grew their skills—submitted via pull requests.
+Everything here is free, community-maintained, and beginner-friendly.
 
 ---
 
-## How to Use This Repository
+## What is in this repository
 
-1. Start with **contribution_sources/** to explore where and how beginners can contribute safely and meaningfully.
-2. Use **learning/** to strengthen skills using free, trusted resources and follow simple learning paths.
-3. Try the **hands-on labs** (where available) to gain practical exposure to real open-source projects.
-4. Read **success stories** to learn from real contributor journeys.
-5. For mentoring and student-focused opportunities, use sources like the CNCF mentoring repo and CNCF students repo listed under **contribution_sources/**.
-6. Improve OpenPath by submitting a **pull request**—add a new source, update an existing one, or refine documentation.
-
----
-
-## Community & Contributions
-
-OpenPath welcomes community contributions:
-- Add or improve sources via pull requests.
-- Clearly explain *why* a source is useful or trusted.
-- Help keep information current and beginner-friendly.
-
-Please read `CONTRIBUTING.md` before submitting changes.
+| Directory | What it contains |
+|-----------|-----------------|
+| `labs/` | Step-by-step hands-on labs — start here if you are new |
+| `learning_path/` | Structured path for students and job seekers |
+| `contribution_sources/` | Where to find issues, OSS platforms, internships, mentorship |
+| `learning/` | Curated free learning resources |
+| `success_stories/` | Real contributor journeys and how they got there |
 
 ---
 
-## Disclaimer
+## Where to start
 
-OpenPath provides curated sources and guidance for exploration and learning.  
-Participants must perform their own due diligence when engaging with any project, program, or opportunity.  
-**There are no guarantees of jobs, internships, or outcomes.**
+**If you are brand new to Git and GitHub:**
+→ `labs/github-basics/README.md`
+
+**If you want to make your first open-source contribution:**
+→ `labs/first-contribution/README.md`
+
+**If you are a student looking for internships or structured programs:**
+→ `contribution_sources/INTERNSHIPS_AND_MENTORSHIP.md`
+
+**If you want a structured path from zero to internship-ready:**
+→ `learning_path/STUDENT_JOB_SEEKER_PATH.md`
 
 ---
 
-*OpenPath is about opening paths — from learning, to contribution, to long-term participation in open source.*
+## Contributing
+
+Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+
+All contributions must follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
