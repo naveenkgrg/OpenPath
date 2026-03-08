@@ -56,11 +56,15 @@ Keep it short and readable. A profile README that is too long will not be read.
 - Optional: a sentence about your open-source interests or goals.
 
 **What to avoid:**
-- Auto-generated stats badges that are just there for decoration.
 - Long lists of technologies you have only touched briefly.
 - Copying someone else's README structure without adapting it to your actual situation.
+- Stats widgets if your contribution history is empty — add them once your graph has real activity.
 
-### Minimal profile README template
+---
+
+### Template A — Minimal (text only)
+
+Good starting point if you are brand new or prefer a clean, no-frills profile.
 
 ```markdown
 # Hi, I am [Your Name]
@@ -75,6 +79,47 @@ Open to: [contributions, collaboration, mentorship — whatever applies].
 
 [Optional: link to portfolio or contact]
 ```
+
+---
+
+### Template B — Visual (stats + icons + projects)
+
+A more structured layout using GitHub Stats widgets and technology icons. Replace every `YOUR-USERNAME` and placeholder with your own details. Only add the tech icons for tools you actually use.
+
+```markdown
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR-USERNAME&layout=compact&theme=dark&hide_border=true" height="165" />
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=YOUR-USERNAME&theme=dark&hide_border=true" height="165" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=YOUR-USERNAME&theme=github-compact&hide_border=true" />
+</p>
+
+<p align="center">
+  <!-- Add or remove icons for languages and tools you actually use -->
+  <!-- Find icons at: https://github.com/devicons/devicon/tree/master/icons -->
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" height="45" />&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" height="45" />&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" height="45" />
+</p>
+
+---
+
+### Featured Projects
+
+**[Project Name](https://github.com/YOUR-USERNAME/repo-name)**
+> One sentence describing what it does, who it is for, and what makes it interesting.
+
+**[Project Name](https://github.com/YOUR-USERNAME/repo-name)**
+> One sentence describing what it does, who it is for, and what makes it interesting.
+```
+
+**Notes on Template B:**
+- The stats widgets pull live data from your GitHub activity — they look better the more you contribute.
+- Icon images come from [devicons](https://github.com/devicons/devicon) — a community-maintained SVG icon set, free to use.
+- The "Featured Projects" section is manually written — pick 2–3 projects you are proud of and can explain clearly.
+- Do not add a project entry unless the repo has a real README and at least a few meaningful commits.
 
 Adapt this to your situation. Authenticity matters more than completeness.
 
