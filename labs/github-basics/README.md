@@ -77,7 +77,119 @@ user.email=your-email@example.com
 
 ---
 
-## Step 4 — Create Your First Repository on GitHub
+## Step 4 — Authenticate with GitHub
+
+GitHub removed password authentication in 2021. You need to set up one of two methods before you can clone private repos or push anything.
+
+**Choose one: HTTPS with a Personal Access Token (simpler) or SSH keys (recommended for daily use).**
+
+---
+
+### Option A — Personal Access Token (HTTPS)
+
+A Personal Access Token (PAT) is a password replacement you generate on GitHub and paste when Git asks for credentials.
+
+**Create the token:**
+
+1. Go to https://github.com/settings/tokens
+2. Click **Generate new token → Generate new token (classic)**
+3. Give it a name (e.g., `my-laptop`)
+4. Set an expiration (90 days is a safe default)
+5. Under **Scopes**, check **repo**
+6. Click **Generate token**
+7. Copy the token immediately — GitHub will not show it again
+
+**Cache the token so you are not prompted every time:**
+
+macOS:
+```bash
+git config --global credential.helper osxkeychain
+```
+
+Windows:
+```bash
+git config --global credential.helper manager
+```
+
+Linux:
+```bash
+git config --global credential.helper store
+```
+
+The first time you `clone` or `push`, Git will prompt for your GitHub username and password. Enter your GitHub username, and paste the token as the password. It will be saved and reused automatically after that.
+
+---
+
+### Option B — SSH Keys (recommended)
+
+SSH keys let you authenticate without ever entering a password or token. Once set up, they work silently on every push and clone.
+
+**Step 1 — Generate an SSH key pair:**
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+```
+
+When prompted:
+- Press **Enter** to accept the default file location (`~/.ssh/id_rsa`)
+- Enter a passphrase (optional but recommended) or press **Enter** to skip
+
+**Step 2 — Add the key to the SSH agent:**
+
+macOS / Linux:
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+```
+
+Windows (Git Bash):
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+```
+
+**Step 3 — Copy your public key:**
+
+macOS:
+```bash
+pbcopy < ~/.ssh/id_rsa.pub
+```
+
+Linux:
+```bash
+cat ~/.ssh/id_rsa.pub
+# Copy the output manually
+```
+
+Windows (Git Bash):
+```bash
+clip < ~/.ssh/id_rsa.pub
+```
+
+**Step 4 — Add the key to GitHub:**
+
+1. Go to https://github.com/settings/keys
+2. Click **New SSH key**
+3. Give it a title (e.g., `My Laptop`)
+4. Paste the key into the **Key** field
+5. Click **Add SSH key**
+
+**Step 5 — Test the connection:**
+
+```bash
+ssh -T git@github.com
+```
+
+Expected output:
+```
+Hi YOUR-USERNAME! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+If you use SSH, use the SSH clone URL (`git@github.com:USERNAME/repo.git`) instead of the HTTPS URL when cloning.
+
+---
+
+## Step 5 — Create Your First Repository on GitHub
 
 1. Go to https://github.com and click the **+** icon in the top-right corner, then click **New repository**.
 2. Name the repository `my-first-repo` (or anything you like).
@@ -89,7 +201,7 @@ You should now see your new repository at `https://github.com/YOUR-USERNAME/my-f
 
 ---
 
-## Step 5 — Clone the Repository Locally
+## Step 6 — Clone the Repository Locally
 
 Cloning downloads the repository to your machine so you can work on it.
 
@@ -123,7 +235,7 @@ cd my-first-repo
 
 ---
 
-## Step 6 — Create a File, Commit, and Push
+## Step 7 — Create a File, Commit, and Push
 
 **Create a new file:**
 
@@ -188,11 +300,11 @@ To https://github.com/YOUR-USERNAME/my-first-repo.git
    abc1234..def5678  main -> main
 ```
 
-If GitHub asks for your credentials, use your GitHub username. For the password, you need a **Personal Access Token (PAT)**, not your GitHub password. Create one at https://github.com/settings/tokens — select "repo" scope and set an expiration. Paste the token when prompted for a password.
+If Git prompts for credentials on push, refer back to Step 4 for HTTPS token setup or switch to the SSH remote URL.
 
 ---
 
-## Step 7 — Verify on GitHub
+## Step 8 — Verify on GitHub
 
 Go to `https://github.com/YOUR-USERNAME/my-first-repo` in your browser. You should see the `notes.md` file listed in the repository, along with your commit message "Add notes file."
 
