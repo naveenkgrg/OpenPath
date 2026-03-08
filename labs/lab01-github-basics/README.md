@@ -2,7 +2,7 @@
 
 **Prerequisites:** None — this is the starting point.
 **Estimated time:** 30 minutes
-**What you will have at the end:** A GitHub account, Git installed locally, and a repository with your first commit pushed to GitHub.
+**What you will have at the end:** A GitHub account, Git installed locally, a repository with your first commit pushed to GitHub, and a live GitHub profile README (About Me page).
 
 ---
 
@@ -312,6 +312,69 @@ Click on the commit message or the clock icon to see your full commit history.
 
 ---
 
+## Step 9 — Create Your GitHub Profile README (About Me Page)
+
+GitHub has a special feature: a repository named exactly the same as your username will display its `README.md` at the top of your GitHub profile page — visible to anyone who visits your profile.
+
+This is your public "About Me" page.
+
+**Step 1 — Create the special profile repository:**
+
+1. Go to https://github.com/new
+2. In the **Repository name** field, type your GitHub username exactly (for example, if your username is `janesmith`, name the repo `janesmith`)
+3. GitHub will show a green banner: *"You found a secret! janesmith/janesmith is a ✨special✨ repository..."* — this confirms you have the name right
+4. Set it to **Public**
+5. Check **Add a README file**
+6. Click **Create repository**
+
+**Step 2 — Clone it locally:**
+
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-USERNAME.git
+cd YOUR-USERNAME
+```
+
+**Step 3 — Replace the README with your About Me content:**
+
+Open `README.md` in any text editor and replace its contents with this starter template. Fill in the bracketed sections with your own details:
+
+```markdown
+# Hi, I am [Your Name] 👋
+
+[One sentence about your background — for example: "Computer science student interested in open source and cloud infrastructure."]
+
+## What I am working on
+
+- [Current project or learning goal]
+- [Another project or course you are going through]
+
+## Skills
+
+- **Languages:** [e.g. Python, JavaScript]
+- **Tools:** [e.g. Git, Docker, VS Code]
+
+## Connect
+
+- [LinkedIn URL or "not yet set up"]
+- [Personal site or portfolio URL, if you have one]
+```
+
+Keep it honest. Only list skills you can actually use. You can expand it over time.
+
+**Step 4 — Commit and push:**
+
+```bash
+git add README.md
+git commit -m "Add profile README"
+git push origin main
+```
+
+**Step 5 — See it live:**
+
+Go to `https://github.com/YOUR-USERNAME` in your browser. Your About Me content will appear at the top of your profile page, above your pinned repositories.
+
+---
+
 ## Lab Complete
 
 You have:
@@ -320,6 +383,7 @@ You have:
 - Created a repository on GitHub.
 - Cloned it locally.
 - Made a file, committed it, and pushed it to GitHub.
+- Created a GitHub profile README visible on your public profile.
 
 **Next step:** Lab 2 — Start Your Own Project: `labs/lab02-start-your-project/README.md`
 
