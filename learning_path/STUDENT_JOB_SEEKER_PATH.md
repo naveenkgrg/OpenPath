@@ -32,7 +32,7 @@ Work at your own pace. These time ranges are rough guides, not requirements.
 2. Fill in your profile: add a real name, a short bio, your location (optional), and a link to a portfolio or LinkedIn if you have one.
 3. Set a profile photo — a clear, professional image helps.
 4. Follow the **GitHub Profile Guide** to create a profile README that introduces you: see `learning_path/GITHUB_PROFILE_GUIDE.md`.
-5. Complete **Lab 1 (GitHub & Git Basics)** to confirm your local setup works: see `labs/github-basics/README.md`.
+5. Complete **Lab 1 (GitHub & Git Basics)** to confirm your local setup works: see `labs/lab01-github-basics/README.md`.
 
 ### Checkpoint — you are ready for Phase 1 when:
 - You have a GitHub account.
@@ -73,7 +73,7 @@ Work at your own pace. These time ranges are rough guides, not requirements.
 
 ### Actions
 
-1. Complete **Lab 2 (Your First Open-Source Contribution)**: see `labs/first-contribution/README.md`. This walks you through contributing to a practice repository designed for beginners.
+1. Complete **Lab 2 (Your First Open-Source Contribution)**: see `labs/lab03-first-contribution/README.md`. This walks you through contributing to a practice repository designed for beginners.
 2. After completing the lab, find a real beginner-friendly issue using the sources in `contribution_sources/OSS_BEGINNER_CONTRIBUTION_SOURCES.md`. Good starting points:
    - Good First Issue (https://goodfirstissue.dev)
    - Up For Grabs (https://up-for-grabs.net)
@@ -98,7 +98,7 @@ Work at your own pace. These time ranges are rough guides, not requirements.
 
 ### Actions
 
-1. Complete **Lab 3 (Start Your Own Open-Source Project)**: see `labs/start-your-project/README.md`. This walks you through creating a well-structured public repository.
+1. Complete **Lab 3 (Start Your Own Open-Source Project)**: see `labs/lab02-start-your-project/README.md`. This walks you through creating a well-structured public repository.
 2. Choose a project topic that reflects genuine interest. Ideas:
    - A tool or script you actually use.
    - A curated list (like OpenPath itself) on a topic you know well.
@@ -153,9 +153,9 @@ Work at your own pace. These time ranges are rough guides, not requirements.
 | Internships and mentorship programs | `contribution_sources/INTERNSHIPS_AND_MENTORSHIP.md` |
 | Free learning resources | `learning/LEARNING_RESOURCES.md` |
 | GitHub profile tips | `learning_path/GITHUB_PROFILE_GUIDE.md` |
-| Lab 1: Git basics | `labs/github-basics/README.md` |
-| Lab 2: First contribution | `labs/first-contribution/README.md` |
-| Lab 3: Start your project | `labs/start-your-project/README.md` |
+| Lab 1: Git basics | `labs/lab01-github-basics/README.md` |
+| Lab 2: First contribution | `labs/lab03-first-contribution/README.md` |
+| Lab 3: Start your project | `labs/lab02-start-your-project/README.md` |
 | Contributor success stories | `success_stories/SUCCESS_STORIES.md` |
 
 ---

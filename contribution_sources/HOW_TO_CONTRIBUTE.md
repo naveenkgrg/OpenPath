@@ -84,4 +84,4 @@ Keep the title short and descriptive. Examples:
 
 - To find projects with beginner issues: `contribution_sources/OSS_BEGINNER_CONTRIBUTION_SOURCES.md`
 - To understand major OSS ecosystems: `contribution_sources/OSS_PLATFORMS.md`
-- To practice the full PR workflow first: `labs/first-contribution/README.md`
+- To practice the full PR workflow first: `labs/lab03-first-contribution/README.md`

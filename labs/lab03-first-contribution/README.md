@@ -202,7 +202,7 @@ You have:
 - Made a change, committed it, and pushed it to your fork.
 - Opened a pull request to the original project.
 
-**Next step:** Lab 3 — Start Your Own Open-Source Project: `labs/start-your-project/README.md`
+**Next step:** Lab 3 — Start Your Own Open-Source Project: `labs/lab02-start-your-project/README.md`
 
 ---
 

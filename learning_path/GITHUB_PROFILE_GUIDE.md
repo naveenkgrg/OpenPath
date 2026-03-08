@@ -151,8 +151,8 @@ If you are applying for internships or entry-level roles, your GitHub profile is
 
 ## Cross-Links
 
-- To set up your profile from scratch and make your first commit: `labs/github-basics/README.md`
-- To create a project worth pinning: `labs/start-your-project/README.md`
+- To set up your profile from scratch and make your first commit: `labs/lab01-github-basics/README.md`
+- To create a project worth pinning: `labs/lab02-start-your-project/README.md`
 - To see examples of contributor profiles and journeys: `success_stories/SUCCESS_STORIES.md`
 - To follow a full learning path from setup to internship: `learning_path/STUDENT_JOB_SEEKER_PATH.md`
 

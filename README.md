@@ -28,10 +28,10 @@ Everything here is free, community-maintained, and beginner-friendly.
 ## Where to start
 
 **If you are brand new to Git and GitHub:**
-→ `labs/github-basics/README.md`
+→ `labs/lab01-github-basics/README.md`
 
 **If you want to make your first open-source contribution:**
-→ `labs/first-contribution/README.md`
+→ `labs/lab03-first-contribution/README.md`
 
 **If you are a student looking for internships or structured programs:**
 → `contribution_sources/INTERNSHIPS_AND_MENTORSHIP.md`

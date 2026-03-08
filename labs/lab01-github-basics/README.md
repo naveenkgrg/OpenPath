@@ -321,7 +321,7 @@ You have:
 - Cloned it locally.
 - Made a file, committed it, and pushed it to GitHub.
 
-**Next step:** Lab 2 — Your First Open-Source Contribution: `labs/first-contribution/README.md`
+**Next step:** Lab 2 — Start Your Own Project: `labs/lab02-start-your-project/README.md`
 
 ---
 
