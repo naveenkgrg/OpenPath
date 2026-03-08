@@ -1,6 +1,6 @@
-# Lab 3: Start Your Own Open-Source Project
+# Lab 2: Start Your Own Open-Source Project
 
-**Prerequisites:** Lab 1 and Lab 2 complete — you can push commits and open pull requests.
+**Prerequisites:** Lab 1 complete — you have Git installed, a GitHub account, and can push commits.
 **Estimated time:** 45 minutes
 **What you will have at the end:** A public GitHub repository with a README, a LICENSE, a CONTRIBUTING.md, GitHub topics, and an open issue — pinned on your profile.
 
@@ -242,6 +242,8 @@ This repository is now part of your open-source portfolio.
 For the bigger picture of where this fits in your journey: `learning_path/STUDENT_JOB_SEEKER_PATH.md`
 
 For guidance on making your GitHub profile strong around this project: `learning_path/GITHUB_PROFILE_GUIDE.md`
+
+**Next step:** Lab 3 — Your First Open-Source Contribution: `labs/lab03-first-contribution/README.md`
 
 ---
 

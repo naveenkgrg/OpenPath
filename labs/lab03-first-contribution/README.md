@@ -1,6 +1,6 @@
-# Lab 2: Your First Open-Source Contribution
+# Lab 3: Your First Open-Source Contribution
 
-**Prerequisites:** Lab 1 complete — you have Git installed, a GitHub account, and can push commits.
+**Prerequisites:** Lab 1 and Lab 2 complete — you have Git installed, a GitHub account, your own project on GitHub, and can push commits.
 **Estimated time:** 30 minutes
 **What you will have at the end:** A merged pull request on a real open-source practice repository.
 
@@ -202,7 +202,7 @@ You have:
 - Made a change, committed it, and pushed it to your fork.
 - Opened a pull request to the original project.
 
-**Next step:** Lab 3 — Start Your Own Open-Source Project: `labs/lab02-start-your-project/README.md`
+**You have completed all three labs.** To find real beginner-friendly issues to contribute to next: `contribution_sources/OSS_BEGINNER_CONTRIBUTION_SOURCES.md`
 
 ---
 
