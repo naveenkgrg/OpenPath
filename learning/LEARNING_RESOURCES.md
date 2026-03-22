@@ -32,6 +32,16 @@ OpenPath intentionally limits this list to avoid noise and duplication.
 
 ---
 
+## Practical Build Module
+
+OpenPath also includes a practical build module:
+
+- `learning/how-to-make-end-to-end-project/`
+
+This module shows how to define an MVP, scaffold a project, use GitHub, and deploy a small app called `OpenPath Local`.
+
+---
+
 ## Selection Criteria
 
 Resources included here typically meet the following:
