@@ -1,12 +1,12 @@
-# Example Commands: OpenPath Local
+# Example Commands: OpenPath NearMe
 
 These example commands show one practical path from idea to MVP.
 
 ## 1. Create the App
 
 ```bash
-npx create-next-app@latest openpath-local
-cd openpath-local
+npx create-next-app@latest openpath-nearme
+cd openpath-nearme
 git init
 git add .
 git commit -m "Initial Next.js app"
@@ -15,13 +15,13 @@ git commit -m "Initial Next.js app"
 ## 2. Create the GitHub Repo
 
 ```bash
-gh repo create openpath-local --public --source=. --remote=origin --push
+gh repo create openpath-nearme --public --source=. --remote=origin --push
 ```
 
 If needed, create the repo on GitHub manually and then connect it:
 
 ```bash
-git remote add origin https://github.com/<your-username>/openpath-local.git
+git remote add origin https://github.com/<your-username>/openpath-nearme.git
 git branch -M main
 git push -u origin main
 ```

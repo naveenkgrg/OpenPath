@@ -2,9 +2,9 @@
 
 This learning module shows how to go from idea to MVP to deployed app using a simple example project:
 
-**OpenPath Local**
+**OpenPath NearMe**
 
-OpenPath Local is a lightweight app idea for finding nearby tech events such as conferences, hackathons, meetups, and community events.
+OpenPath NearMe is a lightweight app idea for finding nearby tech events such as conferences, hackathons, meetups, and community events.
 
 ---
 
@@ -22,7 +22,7 @@ Teach learners how to:
 ## Project Example
 
 ### App Name
-`OpenPath Local`
+`OpenPath NearMe`
 
 ### Problem
 Event information is spread across many websites. Users want one simple place to discover nearby tech events.
@@ -75,7 +75,7 @@ Keep the first version lean. Skip database and auth unless they are required.
 
 ---
 
-## MVP Scope for OpenPath Local
+## MVP Scope for OpenPath NearMe
 
 Build only this:
 - search by city

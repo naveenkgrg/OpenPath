@@ -1,4 +1,4 @@
-# Project Brief: OpenPath Local
+# Project Brief: OpenPath NearMe
 
 ## Idea
 
@@ -10,7 +10,7 @@ Build a simple app that helps users find nearby:
 
 ## Product Name
 
-`OpenPath Local`
+`OpenPath NearMe`
 
 ## Problem
 
