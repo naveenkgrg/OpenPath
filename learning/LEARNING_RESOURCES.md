@@ -32,6 +32,16 @@ OpenPath intentionally limits this list to avoid noise and duplication.
 
 ---
 
+## Practical Build Module
+
+OpenPath also includes a practical build module:
+
+- `learning/how-to-make-end-to-end-project/`
+
+This single-file module shows how to plan, build, test, integrate, and deploy a small project from idea to MVP, using `OpenPath NearMe` only as an example when helpful.
+
+---
+
 ## Selection Criteria
 
 Resources included here typically meet the following:

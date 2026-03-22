@@ -20,6 +20,9 @@ The goal of OpenPath is to highlight trusted sources using transparent community
   Curated learning resources and simple learning paths to help build contribution-ready skills.  
   Vendor-based resources or certifications may be included **only if they are freely accessible**.
 
+- **End-to-end build modules**  
+  Practical modules that show how to go from idea to MVP to deployed app using free tools and simple workflows.
+
 - **Community success stories**  
   A place for learners to share how they made their first contribution, found an internship, gained recognition, or grew their skills—submitted via pull requests.
 
@@ -29,10 +32,11 @@ The goal of OpenPath is to highlight trusted sources using transparent community
 
 1. Start with **contribution_sources/** to explore where and how beginners can contribute safely and meaningfully.
 2. Use **learning/** to strengthen skills using free, trusted resources and follow simple learning paths.
-3. Try the **hands-on labs** (where available) to gain practical exposure to real open-source projects.
-4. Read **success stories** to learn from real contributor journeys.
-5. For mentoring and student-focused opportunities, use sources like the CNCF mentoring repo and CNCF students repo listed under **contribution_sources/**.
-6. Improve OpenPath by submitting a **pull request**—add a new source, update an existing one, or refine documentation.
+3. Use **learning/how-to-make-end-to-end-project/** to see a practical example of building and shipping a small app.
+4. Try the **hands-on labs** (where available) to gain practical exposure to real open-source projects.
+5. Read **success stories** to learn from real contributor journeys.
+6. For mentoring and student-focused opportunities, use sources like the CNCF mentoring repo and CNCF students repo listed under **contribution_sources/**.
+7. Improve OpenPath by submitting a **pull request**—add a new source, update an existing one, or refine documentation.
 
 ---
 
