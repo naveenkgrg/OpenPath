@@ -38,7 +38,7 @@ OpenPath also includes a practical build module:
 
 - `learning/how-to-make-end-to-end-project/`
 
-This module shows how to define an MVP, scaffold a project, use GitHub, and deploy a small app called `OpenPath NearMe`.
+This single-file module shows how to plan, build, test, integrate, and deploy a small project from idea to MVP, using `OpenPath NearMe` only as an example when helpful.
 
 ---
 
