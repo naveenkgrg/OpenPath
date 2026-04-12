@@ -20,7 +20,7 @@ Everything here is free, community-maintained, and beginner-friendly.
 | `labs/` | Step-by-step hands-on labs — start here if you are new |
 | `learning_path/` | Structured path for students and job seekers |
 | `contribution_sources/` | Where to find issues, OSS platforms, internships, mentorship |
-| `learning/` | Curated free learning resources |
+| `learning/` | Curated free learning resources, including an AI coding agent lesson |
 | `success_stories/` | Real contributor journeys and how they got there |
 
 ---
@@ -38,6 +38,9 @@ Everything here is free, community-maintained, and beginner-friendly.
 
 **If you want a structured path from zero to internship-ready:**
 → `learning_path/STUDENT_JOB_SEEKER_PATH.md`
+
+**If you want to learn how to build small web apps with AI coding agents:**
+→ `labs/lab04-ai-coding-agent/README.md`
 
 ---
 
