@@ -45,6 +45,21 @@ No paid courses, no affiliate links.
 
 ---
 
+## AI and Coding Agents
+
+Learn more with the dedicated AI agent lesson: `learning/AI_CODING_AGENT_LESSON.md`
+
+| Resource | What it covers | Last Reviewed |
+|----------|---------------|---------------|
+| [GitHub Copilot](https://github.com/features/copilot) | AI coding assistant inside VS Code for autocomplete, code generation, and learning while you type | 2026-04 |
+| [Cursor](https://cursor.sh) | AI-first editor for generating and refining code with prompts | 2026-04 |
+| [ChatGPT](https://chat.openai.com) | Browser-based AI assistant for code generation, debugging, and explanations | 2026-04 |
+| [Claude](https://www.anthropic.com) | AI reasoning and code assistant in the browser | 2026-04 |
+
+Most AI tools offer a free tier or trial access. Use the lesson to learn how to write prompts and validate generated code.
+
+---
+
 ## How to use this list
 
 Pick **one resource** that matches your current level and goal. Go through it consistently before jumping to another. The most common mistake is collecting resources without making progress on any of them.
@@ -53,10 +68,12 @@ If you are a complete beginner: start with **freeCodeCamp** or **GitHub Skills**
 If you want a structured CS foundation: start with **OSSU Computer Science**.
 If you are focused on cloud and infrastructure: start with **Kubernetes Learning Path** or **Linux Foundation Free Courses**.
 If you are interested in security: start with the **OWASP Learning Path**.
+If you want to learn AI-powered development: start with `learning/AI_CODING_AGENT_LESSON.md` and `labs/lab04-ai-coding-agent/README.md`.
 
 ---
 
 ## Cross-links
 
 - Structured learning journey: `learning_path/STUDENT_JOB_SEEKER_PATH.md`
+- New AI coding agents lab: `labs/lab04-ai-coding-agent/README.md`
 - After learning: where to find your first issue: `contribution_sources/OSS_BEGINNER_CONTRIBUTION_SOURCES.md`
