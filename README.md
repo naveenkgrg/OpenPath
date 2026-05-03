@@ -42,6 +42,9 @@ Everything here is free, community-maintained, and beginner-friendly.
 **If you want to learn how to build small web apps with AI coding agents:**
 → `labs/lab04-ai-coding-agent/README.md`
 
+**If you want a quick AI-driven static profile page lab:**
+→ `labs/lab05-static-pages/README.md`
+
 ---
 
 ## Contributing
