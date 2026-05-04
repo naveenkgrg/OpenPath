@@ -163,16 +163,18 @@ AI can help write code, but you must understand it.
 
 ## Step 8 — Commit your work
 
-Save your project in a folder or repository.
+If you do not have a repository yet, create one on GitHub first (see Lab 2), clone it locally, then run the commands below inside that repo's directory.
 
-If you have Git:
+Create a branch, stage your files, and push:
+
 ```bash
+git checkout -b ai-agent-lab
 git add index.html styles.css script.js
 git commit -m "Add AI-generated web project"
-git push origin ai_agent_lab
+git push origin ai-agent-lab
 ```
 
-If you do not have a repository yet, create one on GitHub and add these files.
+Then open a pull request on GitHub to merge `ai-agent-lab` into `main`.
 
 ---
 
@@ -189,3 +191,8 @@ If you do not have a repository yet, create one on GitHub and add these files.
 - [Cursor](https://cursor.sh)
 - [ChatGPT](https://chat.openai.com)
 - [Claude](https://www.anthropic.com)
+
+---
+
+**Next step:** Lab 5 — Static and Interactive Web Demos: `labs/lab05-static-pages/README.md`
+

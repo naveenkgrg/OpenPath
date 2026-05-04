@@ -114,3 +114,7 @@ If the page does not display correctly:
 - How to generate static web projects using AI
 - How to review and refine generated HTML, CSS, and JavaScript
 - How to preview and test browser demos locally
+
+---
+
+**Next step:** Lab 6 — AI Key Concepts (Context, Skills, Agents): `labs/lab06-prompt-context/README.md`

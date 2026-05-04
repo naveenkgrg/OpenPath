@@ -1,3 +1,26 @@
+# Environment variables — never commit real keys
 .env
-.cache/
+.env.local
+.env.*.local
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Claude Desktop agent cache
+.cache/
+.claude/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if any lab scaffolding is added)
+node_modules/
+npm-debug.log*
+
+# OS
+Thumbs.db

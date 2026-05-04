@@ -73,7 +73,7 @@ Work at your own pace. These time ranges are rough guides, not requirements.
 
 ### Actions
 
-1. Complete **Lab 2 (Your First Open-Source Contribution)**: see `labs/lab03-first-contribution/README.md`. This walks you through contributing to a practice repository designed for beginners.
+1. Complete **Lab 3 (Your First Open-Source Contribution)**: see `labs/lab03-first-contribution/README.md`. This walks you through contributing to a practice repository designed for beginners.
 2. After completing the lab, find a real beginner-friendly issue using the sources in `contribution_sources/OSS_BEGINNER_CONTRIBUTION_SOURCES.md`. Good starting points:
    - Good First Issue (https://goodfirstissue.dev)
    - Up For Grabs (https://up-for-grabs.net)
@@ -98,7 +98,7 @@ Work at your own pace. These time ranges are rough guides, not requirements.
 
 ### Actions
 
-1. Complete **Lab 3 (Start Your Own Open-Source Project)**: see `labs/lab02-start-your-project/README.md`. This walks you through creating a well-structured public repository.
+1. Complete **Lab 2 (Start Your Own Open-Source Project)**: see `labs/lab02-start-your-project/README.md`. This walks you through creating a well-structured public repository.
 2. Choose a project topic that reflects genuine interest. Ideas:
    - A tool or script you actually use.
    - A curated list (like OpenPath itself) on a topic you know well.
@@ -154,8 +154,13 @@ Work at your own pace. These time ranges are rough guides, not requirements.
 | Free learning resources | `learning/LEARNING_RESOURCES.md` |
 | GitHub profile tips | `learning_path/GITHUB_PROFILE_GUIDE.md` |
 | Lab 1: Git basics | `labs/lab01-github-basics/README.md` |
-| Lab 2: First contribution | `labs/lab03-first-contribution/README.md` |
-| Lab 3: Start your project | `labs/lab02-start-your-project/README.md` |
+| Lab 2: Start your project | `labs/lab02-start-your-project/README.md` |
+| Lab 3: First contribution | `labs/lab03-first-contribution/README.md` |
+| Lab 4: AI coding agents | `labs/lab04-ai-coding-agent/README.md` |
+| Lab 5: Static web demos | `labs/lab05-static-pages/README.md` |
+| Lab 6: Context, skills, agents | `labs/lab06-prompt-context/README.md` |
+| Lab 7: MCP integration | `labs/lab07-mcp-integration/README.md` |
+| Lab 8: MVP delivery | `labs/lab08-mvp-delivery/README.md` |
 | Contributor success stories | `success_stories/SUCCESS_STORIES.md` |
 
 ---

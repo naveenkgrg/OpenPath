@@ -202,7 +202,9 @@ You have:
 - Made a change, committed it, and pushed it to your fork.
 - Opened a pull request to the original project.
 
-**You have completed all three labs.** To find real beginner-friendly issues to contribute to next: `contribution_sources/OSS_BEGINNER_CONTRIBUTION_SOURCES.md`
+This is the fork-and-PR workflow used on every real open-source project. You now know it end to end.
+
+**Next step:** Lab 4 — AI Coding Agents: `labs/lab04-ai-coding-agent/README.md`
 
 ---
 
